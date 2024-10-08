@@ -1,0 +1,7 @@
+[package]
+name = "ityp"
+version = "1.0.0"
+entrypoint = "lib.typ"
+authors = ["huahuak"]
+license = "MIT"
+description = "A local utility package."
