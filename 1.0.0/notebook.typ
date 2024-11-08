@@ -16,7 +16,7 @@
   doc,
 ) = {
   set text(
-    font: "Times New Roman",
+    font: ("Times New Roman", "Songti SC"),
     size: font_size.body,
   )
   // MARK: render rule
@@ -99,6 +99,7 @@
   // MARK: heading
   set heading(bookmarked: true)
   show heading.where(level: 1): h => {
+    pagebreak(weak: true)
     set align(center)
     set text(size: font_size.h1)
     underline[#h.body #label(h.body.text)]
