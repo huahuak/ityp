@@ -3,6 +3,7 @@
 
 #let icolor = (
   deep-blue: rgb("#261CA3"),
+  beiyang-blue: rgb("#00468c"),
 )
 
 #let slides(
@@ -15,7 +16,9 @@
   background: none,
   document_body,
 ) = {
-  short-author = author
+  if short-author == none {
+    short-author = author
+  }
 
   show heading.where(level: 1): h => {
     section-idx.step()
@@ -89,7 +92,7 @@
     },
     footer-descent: 0.5em,
     background: context {
-      if counter(page).at(here()).first() > 1 {
+      if counter(page).at(here()).first() == 1 {
         background
       }
     },
